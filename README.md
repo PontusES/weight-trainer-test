@@ -2,7 +2,7 @@
 
 ## Overview
 
-This project is a Next.js application that recreates the iconic Star Wars opening crawl, and then have some facts about the movies. It's a fun and interactive way to showcase web development skills while paying homage to the beloved sci-fi franchise.
+This project is a Next.js application that recreates the iconic Star Wars opening crawl and presents facts about the movies. It's a fun and interactive way to showcase web development skills while paying homage to the beloved sci-fi franchise.
 
 ## Features
 
@@ -10,15 +10,21 @@ This project is a Next.js application that recreates the iconic Star Wars openin
 - Responsive design for various screen sizes
 - Custom Star Wars logo component
 - Animated text crawl effect
-- Fetchs data from SWAPI
-- Presents the movies and the characters of the movies
+- Fetches data from SWAPI (Star Wars API)
+- Presents the movies and their characters
+
+## Decisions
+
+I chose to load all people data at once, instead of one by one. This is because using non-bulk behavior could cause a DDoS-like effect when multiple users are using the app simultaneously. During high traffic periods, this approach would lead to scaling issues and, depending on the cloud provider, could significantly drive up costs.
+
+Using pure CSS: I'm use to tailwind or MUI, but I wanted to show case that I can use CSS, even if it was AGES ago I used it last time.
 
 ## Technologies Used
 
-- Next.js
-- React
-- TypeScript
-- CSS Modules
+- Next.js: A React framework for building server-side rendered and statically generated applications
+- React: A JavaScript library for building user interfaces
+- TypeScript: A typed superset of JavaScript that compiles to plain JavaScript
+- CSS Modules: For component-scoped CSS
 
 ## Getting Started
 
@@ -50,22 +56,36 @@ To run this project locally, follow these steps:
 
 5. Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
-## Project Structure
+## Building for Production
 
-- `src/components/`: Contains React components, including the main `Intro` component
-- `src/styles/`: Houses CSS modules for styling
-- `public/`: Stores static assets like images and icons
+To build and run the production version of the app:
 
-## Known bugs
+1. Build the app:
 
-This project do have some minor know bugs, but due to time limitations these are left as is.
+   ```bash
+   npm run build
+   ```
 
-- The intro do mess a bit with the scroll bars.
-- When moving from different viewports, the stars do not reload. This can easly be fixed by listening to view port changes and reinitiate the functionality, but due to the first but this becomes wonky quick as you might understand.
+2. Start the production server:
+
+   ```bash
+   npm start
+   ```
+
+## Known Issues
+
+This project has some minor known issues, which due to time limitations, have been left as is:
+
+- The intro slightly interferes with the scroll bars.
+- When moving between different viewports, the stars do not reload. This could be fixed by listening to viewport changes and reinitiating the functionality, but due to the first issue, this becomes problematic. To fix it, refresh the page and change to a new viewport and back.
 
 ## Intro
 
-The intro is a fun extra and can be turned off by setting "introFinished" to true in page.tsx. I hope the minor bugs with the intro doesn't reflect badly.
+The intro is a fun extra feature that can be turned off by setting "introFinished" to true in page.tsx. We hope the minor bugs with the intro don't detract from the overall experience.
+
+## Contributing
+
+Contributions are welcome! Please feel free to submit a Pull Request.
 
 ## License
 
@@ -75,3 +95,4 @@ This project is open source and available under the [MIT License](LICENSE).
 
 - Inspired by the Star Wars franchise
 - Built with Next.js and React
+- Data provided by SWAPI (Star Wars API)
