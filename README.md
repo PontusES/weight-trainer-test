@@ -1,36 +1,77 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Star Wars Fun Facts App
+
+## Overview
+
+This project is a Next.js application that recreates the iconic Star Wars opening crawl, and then have some facts about the movies. It's a fun and interactive way to showcase web development skills while paying homage to the beloved sci-fi franchise.
+
+## Features
+
+- Faithful recreation of the Star Wars opening crawl
+- Responsive design for various screen sizes
+- Custom Star Wars logo component
+- Animated text crawl effect
+- Fetchs data from SWAPI
+- Presents the movies and the characters of the movies
+
+## Technologies Used
+
+- Next.js
+- React
+- TypeScript
+- CSS Modules
 
 ## Getting Started
 
-First, run the development server:
+To run this project locally, follow these steps:
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+1. Clone the repository:
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+   ```bash
+   git clone https://github.com/your-username/weight-trainer-test.git
+   ```
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+2. Navigate to the project directory:
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+   ```bash
+   cd weight-trainer-test
+   ```
 
-## Learn More
+3. Install dependencies:
 
-To learn more about Next.js, take a look at the following resources:
+   ```bash
+   npm install
+   ```
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+4. Run the development server:
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+   ```bash
+   npm run dev
+   ```
 
-## Deploy on Vercel
+5. Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+## Project Structure
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+- `src/components/`: Contains React components, including the main `Intro` component
+- `src/styles/`: Houses CSS modules for styling
+- `public/`: Stores static assets like images and icons
+
+## Known bugs
+
+This project do have some minor know bugs, but due to time limitations these are left as is.
+
+- The intro do mess a bit with the scroll bars.
+- When moving from different viewports, the stars do not reload. This can easly be fixed by listening to view port changes and reinitiate the functionality, but due to the first but this becomes wonky quick as you might understand.
+
+## Intro
+
+The intro is a fun extra and can be turned off by setting "introFinished" to true in page.tsx. I hope the minor bugs with the intro doesn't reflect badly.
+
+## License
+
+This project is open source and available under the [MIT License](LICENSE).
+
+## Acknowledgements
+
+- Inspired by the Star Wars franchise
+- Built with Next.js and React
