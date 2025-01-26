@@ -16,21 +16,13 @@ export const Dashboard = () => {
     setSelectedFilm(null);
   }, []);
 
-  useEffect(() => {
-    console.log(films);
-  }, [films]);
-
   if (loading) {
     return <p>Loading...</p>;
   }
 
-  return (
-    <div>
-      {selectedFilm ? (
-        <FilmDetails film={selectedFilm} onClose={handleCloseDetails} />
-      ) : (
-        <FilmsGrid films={films} onSelectFilm={handleSelectFilm} />
-      )}
-    </div>
-  );
+  if (selectedFilm) {
+    return <FilmDetails film={selectedFilm} onClose={handleCloseDetails} />;
+  }
+
+  return <FilmsGrid films={films} onSelectFilm={handleSelectFilm} />;
 };

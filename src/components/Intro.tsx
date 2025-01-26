@@ -1,24 +1,24 @@
 import { StarwarsLogo } from './StarwarsLogo';
-import styles from '../styles/intro.module.css';
+import introStyles from '../styles/intro.module.css';
 
 export const Intro = () => {
   return (
-    <>
-      <section className={styles.intro}>
+    <main className={introStyles.main}>
+      <section className={introStyles.intro}>
         A long time ago, in a galaxy far,
         <br /> far away....
       </section>
-      <section className={styles.logoWrapper}>
-        <div className={styles.logo}>
+      <section className={introStyles.logoWrapper}>
+        <div className={introStyles.logo}>
           <StarwarsLogo />
         </div>
       </section>
-      <section id='board' className={styles.board}>
-        <div id='content' className={styles.content}>
-          <p id='title' className={styles.title}>
+      <section id='board' className={introStyles.board}>
+        <div id='content' className={introStyles.content}>
+          <p id='title' className={introStyles.title}>
             Episode I
           </p>
-          <p id='subtitle' className={styles.subtitle}>
+          <p id='subtitle' className={introStyles.subtitle}>
             THE CODER'S APPRAISAL
           </p>
           <br />
@@ -34,6 +34,6 @@ export const Intro = () => {
           </p>
         </div>
       </section>
-    </>
+    </main>
   );
 };

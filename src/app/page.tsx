@@ -17,8 +17,6 @@ const Home: React.FC = () => {
     const y = document.documentElement.clientWidth;
     const x = document.documentElement.clientHeight;
 
-    console.log(x, y);
-
     // Gets random x, y values based on the size of the container
     function getRandomPosition() {
       const randomX = Math.floor(Math.random() * x);
@@ -42,17 +40,11 @@ const Home: React.FC = () => {
     }, 55000);
   }, []);
 
-  return (
-    <>
-      {!introFinished ? (
-        <main className={introStyles.main}>
-          <Intro />
-        </main>
-      ) : (
-        <Dashboard />
-      )}
-    </>
-  );
+  if (introFinished) {
+    return <Dashboard />;
+  }
+
+  return <Intro />;
 };
 
 export default Home;
